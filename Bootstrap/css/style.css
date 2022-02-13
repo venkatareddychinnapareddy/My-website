@@ -1,0 +1,64 @@
+/* custom style*/
+.btn-info, .bg-info {
+    background: linear-gradient(45deg,rgb(117, 166, 230),rgb(171, 11, 245));
+}
+.btn-primary, .bg-primary {
+    background: linear-gradient(45deg, rgb(51, 116, 255), rgb(35, 222, 255));
+}
+.btn-secondary, .bg-secondary {
+    background: linear-gradient(45deg, rgb(231, 114, 150), rgb(39, 181, 206));
+}
+.btn-success, .bg-success {
+   background: linear-gradient(45deg, rgb(12, 241, 241), rgb(118, 231, 12));
+}
+.btn-danger, .bg-danger {
+    background: linear-gradient(45deg, rgb(235, 113, 13), rgb(197, 12, 12));
+}
+.btn-warning, .bg-warning {
+    background: linear-gradient(45deg, rgb(255, 196, 4), rgb(124, 63, 124));
+}
+.btn-dark, .bg-dark {
+    background: linear-gradient(45deg, rgb(15, 15, 15),rgb(44, 59, 73));
+}
+.btn-light, .bg-light {
+    background: white
+}
+
+ .bg-teal , .btn-teal{
+ background: #236666 !important;
+}
+.text-teal{
+    color: #236666 !important;
+}
+ .carousel .carousel-indicators li {
+     width: 30px;
+     height: 5px;
+     border-radius: 0%;
+     cursor: pointer;
+ }
+ html{
+     scroll-behavior: smooth;
+ }
+ @media (max-width: 576px) {
+     .carousel-caption{
+         bottom: 10px;
+     }
+ }
+ .carousel-caption p {
+     display: none;
+ }
+.bg-primary-light{
+    background-color:rgb(89, 163, 233);
+}
+.bg-secondary-light{
+    background-color: rgb(187, 101, 98);
+}
+.bg-info-light {
+    background-color: rgb(143, 105, 247);
+}
+.p-image{ 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px black;
+}
+
+ 
