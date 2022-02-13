@@ -1,1 +1,418 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="Bootstrap/css/font-awesome-5.8.1.css">
+<link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="Bootstrap/css/mdb.css">
+<link rel="stylesheet" href="Bootstrap/css/style.css">
+<title>My Dashboard Website</title>
+</head>
+
+<body>
+
+  <!--------Main Navbar------>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a href="index.html" class="navbar-brand text-success"><i class="fab fa-uikit"></i> Venkat's UI</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#website">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <div class="collapse navbar-collapse" id="website">
+          <ul class="navbar-nav">
+            <li class="nav-item px-3">
+                <a href="index.html" class="nav-link text-white">
+                    <i class="fa fa-chart-bar text-muted"></i> Dashboard</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="tasks.html" class="nav-link text-white">
+                    <i class="fa fa-list text-muted"></i> Tasks</a>
+            </li>
+           <li class="nav-item px-3">
+                <a href="categories.html" class="nav-link text-white">
+                    <i class="fa fa-sitemap text-muted"></i> Categories</a>
+            </li>
+            <li class="nav-item px-3">
+                <a href="employees.html" class="nav-link text-white">
+                    <i class="fa fa-users text-muted"></i> Employees</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item px-3 dropdown">
+                <a href="index.html" class="nav-link text-white" data-toggle="dropdown">
+                    <i class="fa fa-sign-in-alt text-muted"></i> Venkat</a>
+                    <div class="dropdown-menu p-2">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fa fa-user-circle"></i> Profile</a>
+                        <a href="settings.html" class="dropdown-item">
+                            <i class="fa fa-cogs"></i> Settings</a>
+                    </div>
+            </li>
+            <li class="nav-item px-3">
+                <a href="login.html" class="nav-link text-white">
+                    <i class="fa fa-sign-out-alt  text-muted"></i> LogOut</a>
+            </li>
+          </ul>
+       </div>
+    </div>
+</nav>
+
+     <!----------Dashboard----------->
+
+    <section class="p-2 bg-teal text-white">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                  <h1> <i class="fa fa-chart-bar"></i> Dashboard</h1>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------Button Section-------->
+
+   <section class="p-3 bg-light">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#tasks">
+                      <i class="fa fa-plus-circle"></i> Add tasks
+                  </button>
+              </div>
+              <div class="col-md-4">
+                  <button class="btn btn-secondary btn-block" data-toggle="modal" data-target="#categories">
+                      <i class="fa fa-plus-circle"></i> Add Categories
+                  </button>
+              </div>
+              <div class="col-md-4">
+                  <button class="btn btn-info btn-block" data-toggle="modal" data-target="#employees">
+                      <i class="fa fa-plus-circle"></i> Add Employees
+                  </button>
+              </div>
+          </div>
+      </div>
+   </section>
+
+   <!--------Modals Section------->
+
+   <div class="modal" id="tasks">
+     <div class="modal-dialog modal-lg">
+         <div class="modal-content animated swing">
+             <div class="modal-header bg-primary text-white">
+               <h3>Add Task</h3>
+               <button class="close text-white" data-dismiss="modal">
+                   <i class="fa fa-times-circle"></i>
+               </button>
+             </div>
+             <div class="modal-body bg-light">
+                <form action="">
+                    <div class="form-group">
+                        <label class="form-check-label">Title</label>
+                        <input type="text" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label">Category</label>
+                        <select class="form-control">    
+                            <option value="">Select a Category</option>
+                            <option value="">Development</option>
+                            <option value="">Designing</option>
+                            <option value="">Database</option>
+                            <option value="">maintanance</option>
+                            <option value="">Production Support</option>
+                            <option value="">Client Meetings</option>
+                            <option value="">Bug Fixing</option>
+                            <option value="">Enhancement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label">Image Upload</label>
+                        <input type="file" class="form-control-file">
+                        <small>Max Size : 3MB</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label">Description</label>
+                        <textarea name="editor1" class="form-control" cols="30" rows="7" placeholder="Description"></textarea>
+                    </div>
+                    <div>
+                        <a href="#" data-dismiss="modal" class="btn btn-dark">Close</a>
+                        <input type="submit" class="btn btn-primary" data-dismiss="modal" />
+                    </div>
+                </form>
+             </div>
+         </div>
+     </div>
+    </div>
+
+
+    <div class="modal" id="categories">
+     <div class="modal-dialog modal-lg">
+         <div class="modal-content animated flip">
+             <div class="modal-header bg-secondary text-white">
+               <h3>Add Category</h3>
+               <button class="close text-white" data-dismiss="modal">
+                   <i class="fa fa-times-circle"></i>
+               </button>
+             </div>
+             <div class="modal-body bg-light">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Categeory Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="dd-mm-yyyy">
+                    </div>
+                    <div>
+                        <a href="#" data-dismiss="modal" class="btn btn-dark">Close</a>
+                        <button class="btn btn-secondary">Add Category</button>
+                    </div>
+                </form>
+             </div>
+         </div>
+     </div>
+    </div>
+
+
+    <div class="modal" id="employees">
+     <div class="modal-dialog modal-lg">
+         <div class="modal-content animated zoomIn">
+             <div class="modal-header bg-info text-white">
+               <h3>Add Cataegory</h3>
+               <button class="close text-white" data-dismiss="modal">
+                   <i class="fa fa-times-circle"></i>
+               </button>
+             </div>
+             <div class="modal-body bg-light">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Employee Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Employee Email">
+                    </div>
+                     <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Default Password">
+                    </div>
+                    <div>
+                        <a href="#" data-dismiss="modal" class="btn btn-dark">Close</a>
+                        <button class="btn btn-info">Add Employee</button>
+                    </div>
+                </form>
+             </div>
+         </div>
+     </div>
+    </div>
+
+
+   <!---------Main Content------->
+
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Current Tasks</h3>
+                        </div>
+                        <div class="card-body bg-light">
+                        <table class="table table-hover text-center">
+                            <thead class="bg-dark text-white">
+                                <th>SNO</th>
+                                <th>NAME</th>
+                                <th>EMAIL</th>
+                                <th>TASK</th>
+                                <th>LEVEL</th>
+                                <th>CATEGORY</th>
+                                <th>DETAILS</th>
+                            </thead>
+                            <tbody class="bg-warning text-white">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vishwak</td>
+                                    <td>Vishwak@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Ram</td>
+                                    <td>RAm@ui.com</td>
+                                    <td>Justifying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>George</td>
+                                    <td>George@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Nikki</td>
+                                    <td>Nikki@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kevin</td>
+                                    <td>Kevin@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Vinod</td>
+                                    <td>Vinod@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Rahman</td>
+                                    <td>Rahman@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Elizebeth</td>
+                                    <td>Elizebeth@ui.com</td>
+                                    <td>Deploying</td>
+                                    <td>Medium</td>
+                                    <td>Development</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-white btn-sm">Details</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="col-md-3">
+            <div class="card text-center mt-4">
+            <div class="card-header bg-primary text-white">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <i class="fa fa-list fa-4x"></i>
+                    </div>
+                    <div class="col">
+                        <h3 class="display-3">08</h3>
+                        <h6>Tasks</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5>
+                    <a href="tasks.html" class="text-primary">View Tasks <i class="fa fa-arrow-alt-circle-right"></i> </i> </a>
+                </h5>
+            </div>
+        </div>
+
+        <div class="card text-center mt-4">
+            <div class="card-header bg-secondary text-white">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <i class="fa fa-sitemap fa-4x"></i>
+                    </div>
+                    <div class="col">
+                        <h3 class="display-3">15</h3>
+                        <h6>Tasks</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5>
+                    <a href="categories.html" class="text-secondary">View Categories <i class="fa fa-arrow-alt-circle-right"></i> </i> </a>
+                </h5>
+            </div>
+        </div>
+
+        <div class="card text-center mt-4">
+            <div class="card-header bg-info text-white">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <i class="fa fa-users fa-4x"></i>
+                    </div>
+                    <div class="col">
+                        <h3 class="display-3">31</h3>
+                        <h6>Tasks</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5>
+                    <a href="employees.html" class="text-info">View Employees <i class="fa fa-arrow-alt-circle-right"></i> </i> </a>
+                </h5>
+            </div>
+        </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+   <!-----------Main Footer--------->
+
+   <footer class="p-3 bg-dark text-center text-white"> 
+      <div class="container">
+            <div class="row">
+                <div class="col">
+                     <h3>Copyright &copy; 2020, Venkat's UI.com</h3>
+                     <h6>All Rights Reserved</h6>
+                     <h6>Developed & Maintained by 
+                         <a href="https://github.com/venkatareddych" target="_blank" class="text-primary">
+                              <i class="fab fa-github"></i>   VENKATA REDDY</a>
+                     </h6>
+                </div>
+            </div>
+            </div>
+        </div>
+   </footer>
+
+<script src="Bootstrap/js/jQuery-3.5.1.min.js"></script>
+<script src="Bootstrap/js/bootstrap.min.js"></script>
+<script src="Bootstrap/js/popper.min.js"></script>
+<script src="Bootstrap/js/mdb.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script>
+         CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>
