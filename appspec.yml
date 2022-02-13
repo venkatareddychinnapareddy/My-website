@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+hooks:
+  AfterInstall:
+    - location: myscripts/docker_pull.sh
+      timeout: 300
+      runas: root
+
+  BeforeInstall:
+    - location: myscripts/docker_login.sh
+      timeout: 300
+      runas: root
+
+  ApplicationStart:
+    - location: myscripts/docker_run.sh
+      timeout: 300
+      runas: root
